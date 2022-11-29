@@ -1,15 +1,21 @@
- 
-import './App.css';
-
+import React from 'react';
+import {Routes,Route} from 'react-router-dom';
+import Home from './componenets/Home';
+import SignIn from './componenets/SignIn';
+import SignUp from './componenets/SignUp';
 function App() {
-  const handldeSubmit =()=>{
-    console.log("clicked");
-  }
+   
+ 
   return (
-    <div className="App">
-      <button onClick={handldeSubmit}>submit</button>
-    </div>
-  );
+    <>
+     <Routes>
+      <Route path='/' element={<Home/>}></Route>
+      <Route path='/signup' element={<SignUp/>}></Route>
+       
+     </Routes>
+    </>
+       )
+    
+ 
 }
-
 export default App;
